@@ -1,4 +1,4 @@
-# Project Title
+# OpenDemo
 
 This project is created by Diego from John Hancock. Here, you'll find a brief description of what the project does and its purpose. This section is intended to give readers a quick overview of the project's functionality and its value proposition.
 
