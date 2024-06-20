@@ -42,6 +42,7 @@ class Document:
     captions: List[QueryCaptionResult]
     score: Optional[float] = None
     reranker_score: Optional[float] = None
+#generate commentshere to explain this
 
     def serialize_for_results(self) -> dict[str, Any]:
         return {
@@ -91,6 +92,29 @@ class ThoughtStep:
 
 
 class Approach(ABC):
+    """
+    The Approach class serves as an abstract base class for implementing various search and embedding strategies
+    using Azure Search and OpenAI services. It encapsulates the logic for text and image searches, embedding computations,
+    and handling of search results, providing a foundation for specialized search approaches.
+
+    Attributes:
+        search_client (SearchClient): Client for interacting with Azure Search services.
+        openai_client (AsyncOpenAI): Client for making asynchronous requests to OpenAI's API.
+        auth_helper (AuthenticationHelper): Helper for managing authentication and authorization.
+        query_language (Optional[str]): Language of the query, if applicable.
+        query_speller (Optional[str]): Speller configuration for the query, if applicable.
+        embedding_deployment (Optional[str]): Specifies the deployment for embedding computations. Not required for non-Azure OpenAI or text-only retrieval modes.
+        embedding_model (str): The model used for embedding computations.
+        embedding_dimensions (int): The dimensions of the embedding vector.
+        openai_host (str): The host URL for OpenAI services.
+        vision_endpoint (str): Endpoint URL for vision-related services.
+        vision_token_provider (Callable[[], Awaitable[str]]): A callable that provides an authentication token for vision services.
+
+    The class provides methods for constructing search filters, performing searches with various configurations,
+    handling search results, and computing embeddings for both text and images. It is designed to be subclassed
+    to implement specific search strategies and behaviors.
+    """
+
     def __init__(
         self,
         search_client: SearchClient,
