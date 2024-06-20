@@ -1,3 +1,11 @@
+# Project Title
+
+This project is created by Diego from John Hancock. Here, you'll find a brief description of what the project does and its purpose. This section is intended to give readers a quick overview of the project's functionality and its value proposition.
+
+## Installation
+
+Provide detailed instructions on how to install and set up your project. Include any prerequisites or dependencies that need to be installed beforehand.
+
 # ChatGPT-like app with your data using Azure OpenAI and Azure AI Search (Python)
 
 This solution's backend is written in Python. There are also [**JavaScript**](https://aka.ms/azai/js/code), [**.NET**](https://aka.ms/azai/net/code), and [**Java**](https://aka.ms/azai/java/code) samples based on this one. Learn more about [developing AI apps using Azure AI Services](https://aka.ms/azai).
